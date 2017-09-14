@@ -42,7 +42,7 @@ sudo -S <<< $1 sed -i 's/expose_php\s*=.*/expose_php=Off/g' /etc/php/7.0/apache2
 
 #setting apache url rewrite mode
 echo "Setting up the Apache mod_rewrite for Drupal clean urls..."
-a2enmod rewrite
+sudo -S <<< $1 a2enmod rewrite
 
 #it will add the servername name and override all permission in the virtual host
 sudo -S <<< $1 sed -i '/#ServerName www.example.com/c\\t ServerName  localhost' /etc/apache2/sites-available/000-default.conf
@@ -67,16 +67,17 @@ wget https://ftp.drupal.org/files/projects/drupal-8.3.7.tar.gz
 echo "Extracting the zip file and placing it in /var/www/html/drupal"
 sudo -S <<< $1 mkdir /var/www/html/drupal
 sudo -S <<< $1 chmod 777 -R /var/www/html/drupal/
-sudo -S <<< $1 tar -xvf drupal-8.3.7.tar.gz -C /var/www/html/drupal --strip-components=1
+sudo -S <<< $1 tar -pxvf drupal-8.3.7.tar.gz -C /var/www/html/drupal --strip-components=1
 
-echo "Creating new setting.php file for iimbx and providing permissions"
+echo "Creating new setting.php file for drupal and providing permissions"
 sudo -S <<< $1 cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/default/settings.php
 sudo -S <<< $1 mkdir /var/www/html/drupal/sites/default/files
 sudo -S <<< $1 chmod 777 -R /var/www/html/drupal/
 
 
 echo "Instalation complete"
-echo "Your database name = root"
+echo "Your database user name = root"
+echo "Your database user name = drupal"
 echo "Your database password = root"
 echo "Access the url at = localhost/drupal"
 echo "Enjoy coding"
