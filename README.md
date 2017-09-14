@@ -6,6 +6,6 @@ The script will take your system password as parameter.
 
 Change the permission -  sudo chmod 777 drupal_install.sh
  
-Run the script as---	 ./drupal_instal.sh password
+Run the script as---	 ./drupal_install.sh password
 
 The script has been successfullty tested on fresh instalation of ubuntu 16.04 machine.
