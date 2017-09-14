@@ -76,8 +76,8 @@ sudo -S <<< $1 chmod 777 -R /var/www/html/drupal/
 
 
 echo "Instalation complete"
-echo "Your database user name = root"
-echo "Your database user name = drupal"
+echo "Your database name = drupal"
+echo "Your database username = root"
 echo "Your database password = root"
 echo "Access the url at = localhost/drupal"
 echo "Enjoy coding"
