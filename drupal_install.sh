@@ -73,3 +73,10 @@ echo "Creating new setting.php file for iimbx and providing permissions"
 sudo -S <<< $1 cp /var/www/html/drupal/sites/default/default.settings.php /var/www/html/drupal/sites/default/settings.php
 sudo -S <<< $1 mkdir /var/www/html/drupal/sites/default/files
 sudo -S <<< $1 chmod 777 -R /var/www/html/drupal/
+
+
+echo "Instalation complete"
+echo "Your database name = root"
+echo "Your database password = root"
+echo "Access the url at = localhost/drupal"
+echo "Enjoy coding"
