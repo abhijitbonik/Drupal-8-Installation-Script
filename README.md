@@ -1,8 +1,8 @@
+This is an automated shell script that install the latest version of Drupal 8.
+
 The system requires a connection to the internet
 
-This script will install the latest version of Drupal 8
-
-The script will take your system password as parameter.
+The script will take your system password as argument. There will be no prompt for any approval while running the script. The installation of mysql server and creation of database, creating the entire apache and php 7 stack as well as drupal  will happen automatically.
 
 Change the permission -  sudo chmod 777 drupal_install.sh
  
